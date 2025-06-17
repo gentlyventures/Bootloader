@@ -38,7 +38,7 @@ In any Codex-connected repo (e.g. a client project):
 
 ```bash
 git submodule add https://github.com/gentlyventures/codex-bootloader src/ops/codex-bootloader
-````
+```
 
 Or instruct Codex to do this in its first prompt:
 
@@ -111,6 +111,63 @@ And it just works.
 
 ---
 
+## 📡 Using Codex Bootloader Across Repos (e.g. Client Systems)
+
+You can run Codex Bootloader inside one repo while targeting a **different external repo** (like a client project) for actual module building.
+
+### 🧠 Architecture
+
+| Repo | Role |
+|------|------|
+| `codex-bootloader` | The recursive control kernel |
+| `client-repo` (e.g. `fiveblocks`) | The build target (external repo) |
+
+### 🧪 Setup via ChatGPT
+
+1. Open a clean ChatGPT thread
+2. Train it on the bootloader (e.g. paste this README or high-level summary)
+3. Upload `.txt` transcripts of any past planning/work sessions
+4. Ask it to output:
+   - ✅ A Codex prompt that uses this bootloader to scaffold an external module
+   - ✅ A `roadmap.md` file to include in that external module
+
+### 🛠 Codex Bootstrap for External Repos
+
+Paste this in Codex (inside the bootloader repo):
+
+```bash
+npx ts-node bootstrap-module.ts fiveblocks --external=https://github.com/gentlyventures/fiveblocks
+```
+
+Then run:
+
+```bash
+npx ts-node run-all.ts fiveblocks
+```
+
+This scaffolds agents and executes the external module's `/TODO.md`.
+
+### 📁 External Repo Folder Structure (Example)
+
+```
+/src/modules/fiveblocks/
+  ├── AGENTS.md
+  ├── TODO.md
+  ├── agents/
+  └── roadmap.md
+
+/docs/
+  ├── _config.yml
+  ├── _data/roadmap.yml
+  ├── roadmap/index.md
+  ├── sessions/index.md
+  └── agents.md
+```
+
+All logs and progress live inside `/docs/`. Codex will read and write based on what agents and roadmap steps are defined.
+
+---
+
 ## 🧑‍💻 Maintained by Gently Ventures
 
 Feel free to fork and adapt this for your own recursive agent build systems.
@@ -118,6 +175,7 @@ Feel free to fork and adapt this for your own recursive agent build systems.
 MIT License.
 
 ### 🏷️ Repo Tags
+
 - `codex`
 - `agents`
 - `recursive-build`
