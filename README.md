@@ -20,6 +20,7 @@ Each module (e.g. `/src/modules/little-ai-theater/`) is created using:
 
 ## 📦 Folder Structure
 
+```
 codex-bootloader/
 ├── AGENTS.md
 ├── TODO.md
@@ -27,6 +28,7 @@ codex-bootloader/
 ├── .codex-scope.json
 ├── bootstrap-module.ts
 └── README.md
+```
 
 ## 🛠️ Usage
 
