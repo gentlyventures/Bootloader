@@ -72,6 +72,17 @@ You can safely edit `TODO.md` or `AGENTS.md` in any module — the originals rem
 
 ---
 
+## 🔮 Agent Superpowers
+
+Codex agents can spawn sub-agents recursively. Use `AGENT_TYPES.md` to pick the right roles and design an entire swarm. With a well-defined roadmap, Codex can self-plan and then self-build complete applications.
+
+## 🚀 Quickstart
+
+```bash
+git submodule add https://github.com/gentlyventures/codex-bootloader src/ops/codex-bootloader
+npx ts-node src/ops/codex-bootloader/bootstrap-module.ts fiveblocks
+```
+
 ## ✅ Compatible With
 
 * Codex (chat.openai.com/codex)
