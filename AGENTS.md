@@ -22,3 +22,19 @@ It can be invoked in any repository that includes this bootloader.
 
 This agent provides the minimal scaffolding so other agents can begin building
 features immediately.
+
+---
+
+## \ud83d\udce6 Agent Output Guidelines
+
+When Codex scaffolds new agents using this bootloader, it should follow this structure:
+
+For each agent:
+- Create a folder under `/src/modules/<module>/agents/<agent-name>/`
+- Include the following files:
+  - `AGENTS.md` \u2014 defines how this agent operates
+  - `TODO.md` \u2014 task list specific to this agent
+  - `README.md` \u2014 short description of its behavior
+  - `agent-code.ts` \u2014 the logic file for this agent (stub is acceptable)
+
+This ensures all agents are modular, traceable, and bootloader-compatible.
