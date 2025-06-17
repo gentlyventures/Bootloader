@@ -131,40 +131,39 @@ You can run Codex Bootloader inside one repo while targeting a **different exter
    - ✅ A Codex prompt that uses this bootloader to scaffold an external module
    - ✅ A `roadmap.md` file to include in that external module
 
-### 🛠 Codex Bootstrap for External Repos
+---
 
-Paste this in Codex (inside the bootloader repo):
+## 🧠 Passing Memory to Codex
 
-```bash
-npx ts-node bootstrap-module.ts fiveblocks --external=https://github.com/gentlyventures/fiveblocks
+Codex does not have access to past ChatGPT discussions or project planning.  
+If you want Codex to:
+
+- Know what this module is supposed to do
+- Understand what has already been built in the repo
+- Continue based on ChatGPT-generated strategy
+
+Then you must include a “Planning Context” block in the Codex prompt like this:
+
+```markdown
+## 🧠 Planning Context (from ChatGPT)
+
+- This app builds AI-generated trend reports for hedge funds
+- Data is ingested from CSVs, embedded into Weaviate, and turned into insights via RAG
+- A Figma template receives the injected content, which is exported to PDF
+- Final reports are delivered via email or URL
+
+As of 2025-06-17:
+- ETL code exists
+- No agents are scaffolded
+- Bootloader is installed but not run yet
+
+Codex must:
+- Scaffold `/src/modules/fiveblocks/`
+- Create agents + TODO.md
+- Execute recursively and log progress to `/docs/`
 ```
 
-Then run:
-
-```bash
-npx ts-node run-all.ts fiveblocks
-```
-
-This scaffolds agents and executes the external module's `/TODO.md`.
-
-### 📁 External Repo Folder Structure (Example)
-
-```
-/src/modules/fiveblocks/
-  ├── AGENTS.md
-  ├── TODO.md
-  ├── agents/
-  └── roadmap.md
-
-/docs/
-  ├── _config.yml
-  ├── _data/roadmap.yml
-  ├── roadmap/index.md
-  ├── sessions/index.md
-  └── agents.md
-```
-
-All logs and progress live inside `/docs/`. Codex will read and write based on what agents and roadmap steps are defined.
+Paste that into the bottom of any Codex prompt before execution.
 
 ---
 
