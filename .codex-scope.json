@@ -1,0 +1,4 @@
+{
+  "allowed_folders": ["src/modules/**", "src/ops/codex-bootloader/**"],
+  "forbidden_files": ["src/pages/Build.tsx", "src/components/ui/**"]
+}
