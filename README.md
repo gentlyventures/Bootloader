@@ -1,4 +1,47 @@
-# 🧠 Bootloader
+# Bootloader
+> _From prompt to runnable agent swarm in 30 seconds._
+
+[![CI](https://github.com/.../actions/workflows/ci.yml/badge.svg)]()
+[![npm version](https://img.shields.io/npm/v/@gentlyventures/bootloader-core)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/gentlyventures/bootloader?style=social)]()
+![Portia adapter](https://img.shields.io/badge/adapter-Portia-lightgrey)
+
+## What is Bootloader?
+Bootloader is a monorepo-based scaffolding engine that turns a single prompt into a fully wired multi-agent project—powered by Codex, Portia, or any adapter you choose.
+
+## Table of Contents
+- [What is Bootloader?](#what-is-bootloader)
+- [Pre-Setup](#pre-setup)
+- [Getting Started with Codex](#getting-started-with-codex)
+- [Getting Started with Portia](#getting-started-with-portia)
+- [Usage](#usage)
+
+## Pre-Setup
+
+- **GitHub repository**  
+  You need an existing repo (public or private) where Bootloader will scaffold your project.
+
+- **Codex Web UI & environment**  
+  A valid OpenAI Enterprise Codex account. Follow “Setup your first environment” and “Connect additional GitHub repositories with Codex” in the OpenAI Admin guide:  
+  https://help.openai.com/en/articles/11390924-enterprise-admin-getting-started-guide-for-codex
+
+- **Project context injection**  
+  Prepare your full app/project context (code, configs, docs) via our Save-to-Local Chrome extension, a manual template, or another AI helper so prompts include everything the scaffold needs. See “Overview” in the Codex docs:  
+  https://platform.openai.com/docs/codex/overview
+
+- **CLI & environment variables**  
+  Ensure Node.js ≥ 14 and npm (or yarn) are installed, and set `OPENAI_API_KEY` in your shell or `.env` for Codex access.
+
+Once you’ve completed these steps, proceed to [Getting Started with Codex](#getting-started-with-codex) or [Getting Started with Portia](#getting-started-with-portia).
+
+## Getting Started with Codex
+
+Follow the [Usage](#usage) or [Quickstart](#-quickstart) sections to initialize a Codex-powered agent swarm.
+
+## Getting Started with Portia
+
+Connect Bootloader to the Portia adapter to scaffold Portia-driven agent teams.
 
 A modular, recursive build system for Codex and agent-driven AI applications.
 
