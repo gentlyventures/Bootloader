@@ -1,10 +1,10 @@
 # 🧠 Codex Prompt: Bootstrap a New Modular Agent System
 
-You are building a new Codex module using the Codex Bootloader system.
+You are building a new Codex module using the Bootloader system.
 
 Steps:
 
-1. Clone the bootloader to `/src/ops/codex-bootloader/`
+1. Clone the bootloader to `/src/ops/bootloader/`
 2. Run `bootstrap-module.ts` with the desired module name
 3. Use `agent-factory.ts` to scaffold sub-agents
 4. Begin execution from the generated `TODO.md`

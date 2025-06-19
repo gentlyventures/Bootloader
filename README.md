@@ -1,4 +1,4 @@
-# 🧠 Codex Bootloader
+# 🧠 Bootloader
 
 A modular, recursive build system for Codex and agent-driven AI applications.
 
@@ -21,7 +21,7 @@ Each module (e.g. `/src/modules/little-ai-theater/`) is created using:
 ## 📦 Folder Structure
 
 ```
-codex-bootloader/
+Bootloader/
 ├── AGENTS.md
 ├── TODO.md
 ├── run-all.md
@@ -37,19 +37,19 @@ In any Codex-connected repo (e.g. a client project):
 ### 1. Clone this bootloader:
 
 ```bash
-git submodule add https://github.com/gentlyventures/codex-bootloader src/ops/codex-bootloader
+git submodule add https://github.com/gentlyventures/Bootloader src/ops/bootloader
 ```
 
 Or instruct Codex to do this in its first prompt:
 
 ```
-Clone https://github.com/gentlyventures/codex-bootloader into /src/ops/codex-bootloader and run bootstrap-module.ts
+Clone https://github.com/gentlyventures/Bootloader into /src/ops/bootloader and run bootstrap-module.ts
 ```
 
 ### 2. Bootstrap a new module:
 
 ```bash
-npx ts-node src/ops/codex-bootloader/bootstrap-module.ts ai-showcase
+npx ts-node src/ops/bootloader/bootstrap-module.ts ai-showcase
 ```
 
 This creates:
@@ -79,8 +79,8 @@ Codex agents can spawn sub-agents recursively. Use `AGENT_TYPES.md` to pick the 
 ## 🚀 Quickstart
 
 ```bash
-git submodule add https://github.com/gentlyventures/codex-bootloader src/ops/codex-bootloader
-npx ts-node src/ops/codex-bootloader/bootstrap-module.ts fiveblocks
+git submodule add https://github.com/gentlyventures/Bootloader src/ops/bootloader
+npx ts-node src/ops/bootloader/bootstrap-module.ts fiveblocks
 ```
 
 ## ✅ Compatible With
@@ -111,15 +111,15 @@ And it just works.
 
 ---
 
-## 📡 Using Codex Bootloader Across Repos (e.g. Client Systems)
+## 📡 Using Bootloader Across Repos (e.g. Client Systems)
 
-You can run Codex Bootloader inside one repo while targeting a **different external repo** (like a client project) for actual module building.
+You can run Bootloader inside one repo while targeting a **different external repo** (like a client project) for actual module building.
 
 ### 🧠 Architecture
 
 | Repo | Role |
 |------|------|
-| `codex-bootloader` | The recursive control kernel |
+| `Bootloader` | The recursive control kernel |
 | `client-repo` (e.g. `fiveblocks`) | The build target (external repo) |
 
 ### 🧪 Setup via ChatGPT
