@@ -1,6 +1,13 @@
 {
   "name": "@gentlyventures/bootloader-portia-adapter",
-  "version": "0.0.0",
-  "private": true
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'No build needed for Portia adapter'",
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "portia-sdk-python": "^<latest-version>",
+    "@gentlyventures/bootloader-core": "workspace:*"
+  }
 }
-
