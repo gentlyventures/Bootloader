@@ -4,7 +4,7 @@ import * as path from 'path';
 async function main() {
   const [name] = process.argv.slice(2);
   if (!name) {
-    console.error('Usage: ts-node src/ops/codex-bootloader/bootstrap-module.ts <name>');
+    console.error('Usage: ts-node src/ops/bootloader/bootstrap-module.ts <name>');
     process.exit(1);
   }
 

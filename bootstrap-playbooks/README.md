@@ -1,4 +1,4 @@
-# 🧰 Codex Bootloader Playbooks
+# 🧰 Bootloader Playbooks
 
 This folder contains example Codex prompts and modular system scaffolding instructions. These prompts are used to kickstart agent-powered module builds in external or internal repositories.
 

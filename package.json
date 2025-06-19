@@ -1,0 +1,6 @@
+{
+  "name": "bootloader",
+  "version": "1.0.0",
+  "description": "Modular scaffolding engine for Codex-based projects",
+  "type": "module"
+}
