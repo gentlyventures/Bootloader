@@ -1,0 +1,10 @@
+{
+  "allowed_folders": [
+    "packages/core/src/modules/**",
+    "packages/core/src/ops/bootloader/**"
+  ],
+  "forbidden_files": [
+    "packages/core/src/pages/Build.tsx",
+    "packages/core/src/components/ui/**"
+  ]
+}
