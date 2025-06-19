@@ -4,7 +4,7 @@ You are building a new Codex module using the Bootloader system.
 
 Steps:
 
-1. Clone the bootloader to `/src/ops/bootloader/`
+1. Clone the bootloader to `/packages/core/`
 2. Run `bootstrap-module.ts` with the desired module name
 3. Use `agent-factory.ts` to scaffold sub-agents
 4. Begin execution from the generated `TODO.md`

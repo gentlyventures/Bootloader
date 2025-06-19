@@ -14,7 +14,7 @@ function parseArgs(): Args {
     if (key === 'agent') args.agent = value;
   }
   if (!args.module || !args.agent) {
-    console.error('Usage: ts-node agent-factory.ts --module=<module> --agent=<name>');
+    console.error('Usage: ts-node tools/agent-factory.ts --module=<module> --agent=<name>');
     process.exit(1);
   }
   return args;

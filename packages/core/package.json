@@ -1,5 +1,5 @@
 {
-  "name": "@gentlyventures/bootloader",
+  "name": "@gentlyventures/bootloader-core",
   "version": "1.0.0",
   "description": "Modular scaffolding engine for Codex-based projects",
   "type": "module",
@@ -11,12 +11,5 @@
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "build:core": "cd packages/core && npm run build",
-    "test:core": "cd packages/core && npm test"
   }
 }

@@ -13,7 +13,7 @@ It can be invoked in any repository that includes this bootloader.
 ## Behavior
 
 1. Reference `.codex-scope.json` to determine where files may be written.
-2. When a new module name is provided, create `src/modules/<name>/` and copy
+2. When a new module name is provided, create `packages/core/src/modules/<name>/` and copy
    the bootloader's `AGENTS.md` and `TODO.md` as starting points.
 3. If `route.ts` or `README.md` are missing in a module, generate simple stubs
    so the module compiles.
@@ -30,7 +30,7 @@ features immediately.
 When Codex scaffolds new agents using this bootloader, it should follow this structure:
 
 For each agent:
-- Create a folder under `/src/modules/<module>/agents/<agent-name>/`
+- Create a folder under `/packages/core/src/modules/<module>/agents/<agent-name>/`
 - Include the following files:
   - `AGENTS.md` \u2014 defines how this agent operates
   - `TODO.md` \u2014 task list specific to this agent
@@ -38,3 +38,4 @@ For each agent:
   - `agent-code.ts` \u2014 the logic file for this agent (stub is acceptable)
 
 This ensures all agents are modular, traceable, and bootloader-compatible.
+

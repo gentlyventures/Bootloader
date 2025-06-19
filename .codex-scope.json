@@ -1,4 +1,0 @@
-{
-  "allowed_folders": ["src/modules/**", "src/ops/bootloader/**"],
-  "forbidden_files": ["src/pages/Build.tsx", "src/components/ui/**"]
-}
