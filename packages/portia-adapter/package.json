@@ -4,10 +4,9 @@
   "main": "src/index.js",
   "scripts": {
     "build": "echo 'No build needed for Portia adapter'",
-    "test": "echo 'No tests yet'"
+    "test": "jest"
   },
   "dependencies": {
-    "portia-sdk-python": "^<latest-version>",
-    "@gentlyventures/bootloader-core": "workspace:*"
+    "@gentlyventures/bootloader-core": "file:../core"
   }
 }
