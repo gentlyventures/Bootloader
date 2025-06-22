@@ -25,9 +25,10 @@
   "scripts": {
     "build:core": "cd packages/core && npm run build",
     "test:core": "cd packages/core && npm test",
+    "test:portia-adapter": "cd packages/portia-adapter && npm test",
+    "test": "jest",
     "build:cli": "pkg . --out-path dist/cli",
-    "publish:cli": "npm publish --access public",
-    "test:portia-adapter": "cd packages/portia-adapter && npm test"
+    "publish:cli": "npm publish --access public"
   },
   "pkg": {
     "scripts": "tools/cli.js",
