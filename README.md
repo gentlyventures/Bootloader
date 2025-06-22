@@ -224,3 +224,8 @@ MIT License.
 - `ai-infrastructure`
 - `gently-ventures`
 - `llm-pipeline`
+
+## License
+
+Bootloader is available under the MIT License for community use.  
+For a commercial license (no copyleft), see [LICENSE-COMMERCIAL.md](LICENSE-COMMERCIAL.md) or contact [sales@yourcompany.com](mailto:sales@yourcompany.com).

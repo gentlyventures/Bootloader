@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT OR Commercial
+// Copyright (c) 2025 Dave Weinberg
 from portia import Plan
 
 class {{projectName}}Plan(Plan):

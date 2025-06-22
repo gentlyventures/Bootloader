@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT OR Commercial
+// Copyright (c) 2025 Dave Weinberg
 const { registerAdapter } = require('@gentlyventures/bootloader-core');
 let portia;
 try {
