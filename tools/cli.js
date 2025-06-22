@@ -1,18 +1,14 @@
 #!/usr/bin/env node
-const core = require('@gentlyventures/bootloader-core');
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+import core from '@gentlyventures/bootloader-core';
 
-const args = process.argv.slice(2);
-const options = { portia: false };
-let projectName = '';
-
-for (const arg of args) {
-  if (arg === '--portia') {
-    options.portia = true;
-  } else if (!projectName) {
-    projectName = arg;
-  }
-}
-
-if (options.portia) {
-  core.runAdapter('portia', projectName, options);
-}
+const argv = yargs(hideBin(process.argv))
+  .scriptName('boot')
+  .command('new <name>', 'Scaffold a new project', yargs => {
+    yargs.positional('name', { type: 'string', describe: 'Project name' });
+  }, async ({ name }) => {
+    await core.bootstrapProject(name);
+  })
+  .help()
+  .argv;

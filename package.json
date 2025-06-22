@@ -1,6 +1,6 @@
 {
   "name": "@gentlyventures/bootloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modular scaffolding engine for Codex-based projects",
   "type": "module",
   "devDependencies": {
@@ -8,6 +8,7 @@
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "@typescript-eslint/parser": "^8.34.1",
     "eslint": "^9.29.0",
+    "pkg": "^5.8.1",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
@@ -15,8 +16,25 @@
   "workspaces": [
     "packages/*"
   ],
+  "bin": {
+    "boot": "tools/cli.js"
+  },
   "scripts": {
     "build:core": "cd packages/core && npm run build",
-    "test:core": "cd packages/core && npm test"
+    "test:core": "cd packages/core && npm test",
+    "build:cli": "pkg . --out-path dist/cli",
+    "publish:cli": "npm publish --access public"
+  },
+  "pkg": {
+    "scripts": "tools/cli.js",
+    "assets": [],
+    "targets": [
+      "node20-linux-x64",
+      "node20-macos-x64",
+      "node20-win-x64"
+    ]
+  },
+  "dependencies": {
+    "yargs": "^18.0.0"
   }
 }
