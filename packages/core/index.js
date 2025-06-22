@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT OR Commercial
+// Copyright (c) 2025 Dave Weinberg
 const adapters = {};
 function registerAdapter(name, setup) {
   adapters[name] = setup;
