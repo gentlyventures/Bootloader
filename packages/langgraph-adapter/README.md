@@ -7,3 +7,5 @@ This adapter integrates Bootloader with a LangGraph pipeline.
 boot new my-project --langgraph
 cd my-project
 ```
+
+See the [Bootloader README](../../README.md) for more details.
