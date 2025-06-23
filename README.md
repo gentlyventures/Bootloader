@@ -123,7 +123,7 @@ Codex agents can spawn sub-agents recursively. Use `AGENT_TYPES.md` to pick the 
 
 ```bash
 git submodule add https://github.com/gentlyventures/Bootloader src/ops/bootloader
-npx ts-node src/ops/bootloader/bootstrap-module.ts fiveblocks
+npx ts-node src/ops/bootloader/bootstrap-module.ts
 ```
 
 ## ✅ Compatible With
