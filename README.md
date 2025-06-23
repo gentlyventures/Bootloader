@@ -16,6 +16,12 @@ Bootloader is a monorepo-based scaffolding engine that turns a single prompt int
 - [Getting Started with Codex](#getting-started-with-codex)
 - [Getting Started with Portia](#getting-started-with-portia)
 - [Usage](#usage)
+- [Core](packages/core/README.md)
+- [Init Phase](packages/init-phase/README.md)
+- [Portia Adapter](packages/portia-adapter/README.md)
+- [LangGraph Adapter](packages/langgraph-adapter/README.md)
+- [Tools](tools/README.md)
+- [Examples](examples/README.md)
 
 ## Pre-Setup
 
@@ -209,6 +215,11 @@ Codex must:
 Paste that into the bottom of any Codex prompt before execution.
 
 ---
+
+## Documentation
+
+- Architecture overview: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- Agent registry: [AGENTS.md](AGENTS.md)
 
 ## 🧑‍💻 Maintained by Gently Ventures
 
