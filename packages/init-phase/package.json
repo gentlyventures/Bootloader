@@ -1,5 +1,5 @@
 {
-  "name": "@gentlyventures/bootloader-conductor",
+  "name": "@gentlyventures/bootloader-init-phase",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
