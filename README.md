@@ -163,7 +163,7 @@ You can run Bootloader inside one repo while targeting a **different external re
 | Repo | Role |
 |------|------|
 | `Bootloader` | The recursive control kernel |
-| `client-repo` (e.g. `fiveblocks`) | The build target (external repo) |
+| `client-repo` (e.g. `companyco`) | The build target (external repo) |
 
 ### 🧪 Setup via ChatGPT
 
@@ -201,7 +201,7 @@ As of 2025-06-17:
 - Bootloader is installed but not run yet
 
 Codex must:
-- Scaffold `/src/modules/fiveblocks/`
+- Scaffold `/src/modules/companyco/`
 - Create agents + TODO.md
 - Execute recursively and log progress to `/docs/`
 ```
