@@ -1,15 +1,15 @@
-// SPDX-License-Identifier: MIT OR Commercial
-// Copyright (c) 2025 Dave Weinberg
-const adapters = {};
-function registerAdapter(name, setup) {
-  adapters[name] = setup;
-}
-function runAdapter(name, projectName, options) {
-  const fn = adapters[name];
-  if (typeof fn === 'function') {
-    fn(projectName, options);
-  } else {
-    throw new Error(`Adapter ${name} not registered`);
-  }
-}
-module.exports = { registerAdapter, runAdapter };
+const AgentManager = require('./src/agents/AgentManager');
+const InitPhaseAgent = require('./src/agents/InitPhaseAgent');
+const ScaffoldAgent = require('./src/agents/ScaffoldAgent');
+const CIAgent = require('./src/agents/CIAgent');
+const DocAgent = require('./src/agents/DocAgent');
+const LovableAgent = require('./src/agents/LovableAgent');
+
+const manager = new AgentManager();
+manager.register('InitPhaseAgent', InitPhaseAgent);
+manager.register('ScaffoldAgent', ScaffoldAgent);
+manager.register('CIAgent', CIAgent);
+manager.register('DocAgent', DocAgent);
+manager.register('LovableAgent', LovableAgent);
+
+module.exports = manager;
