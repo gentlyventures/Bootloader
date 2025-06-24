@@ -1,3 +1,4 @@
+// jest.config.cjs
 module.exports = {
   projects: [
     '<rootDir>/packages/core',
