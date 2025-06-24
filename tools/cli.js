@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-import core from '@gentlyventures/bootloader-core';
-import InitPhase from '@gentlyventures/bootloader-init-phase';
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
+const manager = require('@gentlyventures/bootloader-core');
+const core = manager;
+const InitPhase = require('@gentlyventures/bootloader-init-phase');
 
 const argv = yargs(hideBin(process.argv))
   .scriptName('boot')
@@ -11,11 +12,13 @@ const argv = yargs(hideBin(process.argv))
   }, async ({ name }) => {
     await core.bootstrapProject(name);
   })
-  .command('init <projectName>', 'Initialize a new project pre-flight', yargs => {
+  .command('init <projectName>', 'Initialize a new project pre-flight and run agent workflow', yargs => {
     yargs.positional('projectName', { type: 'string', describe: 'Project name' });
   }, async ({ projectName }) => {
     const initPhase = new InitPhase();
     initPhase.run(projectName);
+    await manager.run('InitPhaseAgent', { projectName, cwd: process.cwd() });
+    console.log('✅ InitPhaseAgent completed');
   })
   .help()
   .argv;
