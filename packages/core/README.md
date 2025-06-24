@@ -9,3 +9,5 @@ npm install @gentlyventures/bootloader-core
 ```
 
 See the [Bootloader README](../../README.md) for usage details.
+
+Additional documentation: [ARCHITECTURE](../../docs/ARCHITECTURE.md), [AGENTS](../../AGENTS.md)

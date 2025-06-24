@@ -9,3 +9,5 @@ cd my-project
 ```
 
 See the [Bootloader README](../../README.md) for more details.
+
+Additional documentation: [ARCHITECTURE](../../docs/ARCHITECTURE.md), [AGENTS](../../AGENTS.md)

@@ -2,7 +2,7 @@
   "name": "@gentlyventures/bootloader",
   "version": "1.0.1",
   "description": "Modular scaffolding engine for Codex-based projects",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^24.0.3",
@@ -35,7 +35,9 @@
     "test": "jest",
     "test:e2e": "jest --config jest.config.cjs",
     "build:cli": "pkg . --out-path dist/cli",
-    "publish:cli": "npm publish --access public"
+    "publish:cli": "npm publish --access public",
+    "lint": "eslint \"**/*.{js,ts}\"",
+    "test:init-phase": "cd packages/init-phase && npm test"
   },
   "pkg": {
     "scripts": "tools/cli.js",
@@ -47,6 +49,6 @@
     ]
   },
   "dependencies": {
-    "yargs": "^18.0.0"
+    "yargs": "^17.7.2"
   }
 }
