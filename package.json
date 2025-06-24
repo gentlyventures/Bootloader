@@ -20,7 +20,8 @@
     "packages/core",
     "packages/langgraph-adapter",
     "packages/portia-adapter",
-    "packages/init-phase"
+    "packages/init-phase",
+    "tools"
   ],
   "bin": {
     "boot": "tools/cli.js"
@@ -28,8 +29,11 @@
   "scripts": {
     "build:core": "cd packages/core && npm run build",
     "test:core": "cd packages/core && npm test",
+    "test:langgraph-adapter": "cd packages/langgraph-adapter && npm test",
     "test:portia-adapter": "cd packages/portia-adapter && npm test",
+    "test:tools": "cd tools && npm test",
     "test": "jest",
+    "test:e2e": "jest --config jest.config.cjs --projects tests/integration",
     "build:cli": "pkg . --out-path dist/cli",
     "publish:cli": "npm publish --access public"
   },
