@@ -9,3 +9,5 @@ npx ts-node tools/bootstrap-module.ts my-module
 ```
 
 See the [Bootloader README](../README.md) for full instructions.
+
+Additional documentation: [ARCHITECTURE](../docs/ARCHITECTURE.md), [AGENTS](../AGENTS.md)

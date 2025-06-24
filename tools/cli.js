@@ -24,3 +24,4 @@ const argv = yargs(hideBin(process.argv))
   })
   .help()
   .argv;
+module.exports = argv;

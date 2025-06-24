@@ -9,3 +9,5 @@ npm install @gentlyventures/bootloader-init-phase
 ```
 
 See the [Bootloader README](../../README.md) for more information.
+
+Additional documentation: [ARCHITECTURE](../../docs/ARCHITECTURE.md), [AGENTS](../../AGENTS.md)
