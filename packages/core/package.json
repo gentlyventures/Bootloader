@@ -2,7 +2,7 @@
   "name": "@gentlyventures/bootloader-core",
   "version": "1.0.0",
   "description": "Modular scaffolding engine for Codex-based projects",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^24.0.3",
