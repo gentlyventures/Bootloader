@@ -1,6 +1,7 @@
 {
   "name": "@gentlyventures/bootloader-langgraph-adapter",
   "version": "0.0.0",
+  "main": "src/index.js",
   "private": true,
   "scripts": {
     "build": "echo 'No build step yet'",
