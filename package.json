@@ -35,7 +35,7 @@
     "test:tools": "cd tools && npm test",
     "test": "jest",
     "test:e2e": "jest --config jest.config.cjs",
-    "lint": "eslint -c .eslintrc.cjs \"**/*.{js,ts}\"",
+    "lint": "eslint -c eslint.config.js \"**/*.{js,ts}\"",
     "build:cli": "pkg . --out-path dist/cli",
     "publish:cli": "npm publish --access public"
   },
